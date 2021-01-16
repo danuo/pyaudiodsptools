@@ -51,10 +51,8 @@ pyAudio package and process everything in realtime
 
 
     # Setting a counter and process the chunks via filter_device.apply
-    counter = 0
     for counter in range(len(split_data)):
         split_data[counter] = filter_device.apply(split_data[counter])
-        counter += 1
 
 
     # Merging the numpy-array back into a single big one and write it to a .wav file.
